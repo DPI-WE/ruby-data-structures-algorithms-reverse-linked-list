@@ -42,31 +42,8 @@ end
 def reverse_list(head)
 
 end
-
-# Helper method to convert array to linked list for testing
-def array_to_list(array)
-  return nil if array.empty?
-
-  head = ListNode.new(array.first)
-  current = head
-  array[1..].each do |value|
-    current.next = ListNode.new(value)
-    current = current.next
-  end
-  head
-end
-
-# Helper method to convert linked list to array for easy comparison
-def list_to_array(list)
-  array = []
-  while list
-    array << list.val
-    list = list.next
-  end
-  array
-end
 ```
-{: .repl #reverse_linked_list title="Reverse a Linked List" readonly_lines="[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]"}
+{: .repl #reverse_linked_list title="Reverse a Linked List" readonly_lines="[1,2,3,4,5,6,7]"}
 
 ```ruby
 describe "Reverse Linked List" do
