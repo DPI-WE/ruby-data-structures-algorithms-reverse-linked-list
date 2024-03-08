@@ -43,7 +43,7 @@ def reverse_list(head)
 
 end
 ```
-{: .repl #reverse_linked_list title="Reverse a Linked List" readonly_lines="[1,2,3,4,5,6,7]"}
+{: .repl #reverse_linked_list title="Reverse a Linked List" readonly_lines="[1,2,3,4,5,6,7,8]"}
 
 ```ruby
 describe "Reverse Linked List" do
