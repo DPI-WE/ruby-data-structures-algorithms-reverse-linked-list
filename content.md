@@ -99,7 +99,7 @@ describe "Reverse Linked List" do
   it "properly handles a list with a single element" do
     list = ListNode.to_list([1])
     reversed_list_head = reverse_list(list)
-    expect(list_to_array(reversed_list_head)).to eq([1])
+    expect(ListNode.to_array(reversed_list_head)).to eq([1])
   end
 end
 ```
