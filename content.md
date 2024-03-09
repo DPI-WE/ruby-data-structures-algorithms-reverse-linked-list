@@ -82,7 +82,18 @@ describe "Reverse Linked List" do
   end
 end
 ```
-{: .repl-test #reverse_linked_list_test_1 for="reverse_linked_list" title="Reverse Linked List reverses 1 -> 2 -> 3" points="1"}
+{: .repl-test #reverse_linked_list_test_0 for="reverse_linked_list" title="Reverse Linked List reverses the list 1 -> 2 -> 3 -> nil to 3 -> 2 -> 1 -> nil" points="1"}
+
+```ruby
+describe "Reverse Linked List" do
+  it "reverses the list 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> nil to 6 -> 5 -> 4 -> 3 -> 2 -> 1 -> nil" do
+    list = ListNode.to_list([1, 2, 3, 4, 5, 6])
+    reversed_list_head = reverse_list(list)
+    expect(ListNode.to_array(reversed_list_head)).to eq([6, 5, 4, 3, 2, 1])
+  end
+end
+```
+{: .repl-test #reverse_linked_list_test_1 for="reverse_linked_list" title="Reverse Linked List reverses the list 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> nil to 6 -> 5 -> 4 -> 3 -> 2 -> 1 -> nil" points="1"}
 
 ```ruby
 describe "Reverse Linked List" do
