@@ -37,20 +37,48 @@ class ListNode
     @val = val
     @next = _next
   end
+
+  def ListNode.to_array(list)
+    array = []
+    while list
+        array << list.val
+        list = list.next
+    end
+    array
+  end
+
+  def ListNode.to_list(array)
+    return nil if array.empty?
+
+    head = ListNode.new(array.first)
+    current = head
+    array[1..].each do |value|
+        current.next = ListNode.new(value)
+        current = current.next
+    end
+    head
+  end
 end
 
 def reverse_list(head)
 
 end
+
+array = [1,2,3,4,5]
+puts "original: #{array}"
+head = ListNode.to_list(array)
+head = reversed_list(head)
+reversed_array = ListNode.to_array(head)
+puts "reversed: #{reversed_array}"
 ```
-{: .repl #reverse_linked_list title="Reverse a Linked List" readonly_lines="[1,2,3,4,5,6,7,8]"}
+{: .repl #reverse_linked_list title="Reverse a Linked List" readonly_lines="[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25]"}
 
 ```ruby
 describe "Reverse Linked List" do
   it "reverses the list 1 -> 2 -> 3 -> nil to 3 -> 2 -> 1 -> nil" do
-    list = array_to_list([1, 2, 3])
+    list = ListNode.to_list([1, 2, 3])
     reversed_list_head = reverse_list(list)
-    expect(list_to_array(reversed_list_head)).to eq([3, 2, 1])
+    expect(ListNode.to_array(reversed_list_head)).to eq([3, 2, 1])
   end
 end
 ```
@@ -69,7 +97,7 @@ end
 ```ruby
 describe "Reverse Linked List" do
   it "properly handles a list with a single element" do
-    list = array_to_list([1])
+    list = ListNode.to_list([1])
     reversed_list_head = reverse_list(list)
     expect(list_to_array(reversed_list_head)).to eq([1])
   end
