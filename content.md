@@ -67,11 +67,11 @@ end
 array = [1,2,3,4,5]
 puts "original: #{array}"
 head = ListNode.to_list(array)
-head = reversed_list(head)
+head = reverse_list(head)
 reversed_array = ListNode.to_array(head)
 puts "reversed: #{reversed_array}"
 ```
-{: .repl #reverse_linked_list title="Reverse a Linked List" readonly_lines="[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25]"}
+{: .repl #reverse_linked_list title="Reverse a Linked List" readonly_lines="[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29]"}
 
 ```ruby
 describe "Reverse Linked List" do
